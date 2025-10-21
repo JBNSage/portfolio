@@ -181,7 +181,7 @@ body.theme-dark {
 .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: var(--muted); }
 
 /* Scroll indicator */
-.scroll-indicator { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: grid; place-items: center; gap: 6px; color: var(--muted); opacity: .8; }
+.scroll-indicator { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: grid; place-items: center; gap: 6px; color: var(--muted); opacity: .8; }
 .scroll-indicator .mouse { width: 22px; height: 34px; border-radius: 12px; border: 2px solid #3a4360; position: relative; }
 .scroll-indicator .mouse::after { content: ""; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 3px; height: 6px; background: #5dd6ff; border-radius: 2px; animation: wheel 1.6s ease-in-out infinite; }
 .scroll-indicator .arrow { font-size: 12px; animation: bob 1.6s ease-in-out infinite; }
@@ -386,3 +386,18 @@ body.theme-dark {
 .project-card h4 { margin: 0 0 8px; font-size: 18px; }
 .project-points { margin: 0 0 10px 18px; padding: 0; color: var(--muted); }
 .project-points li { margin-bottom: 6px; }
+
+
+/* Experience list (Professional Experience) */
+.experience-list { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
+.experience-item { background: linear-gradient(180deg, #101525, #0e111a); border: 1px solid #232b41; border-radius: 14px; padding: 16px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03); }
+.experience-item:hover { border-color: #2e3753; }
+.experience-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.experience-head .company { margin: 0; font-size: 18px; letter-spacing: -0.01em; }
+.experience-head .meta { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.meta-chip { padding: 3px 8px; border-radius: 999px; border: 1px solid #26304a; background: linear-gradient(180deg, #121722, #0f1420); color: var(--muted); font-weight: 600; }
+.meta-sep { opacity: .5; }
+
+@media (min-width: 820px) {
+  .experience-list { grid-template-columns: repeat(2, minmax(300px, 1fr)); }
+}
